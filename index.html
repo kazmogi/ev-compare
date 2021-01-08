@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>EV compare</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="formBox">
+        <form>
+          <label for="distanceInput">Distance in miles</label><br />
+          <input type="number" id="distanceInput" name="distanceInput" /><br />
+          <label for="mpgInput">MPG</label><br />
+          <input
+            type="number"
+            id="mpgInput"
+            name="mpgInput"
+            placeholder="37"
+          /><br />
+          <label for="gasPriceInput">Gas Price:</label><br />
+          <input
+            type="number"
+            id="gasPriceInput"
+            name="gasPriceInput"
+            placeholder="2.25"
+          /><br />
+
+          <label for="elecPriceBox">Price per kWh</label><br />
+          <input
+            type="number"
+            id="elecPriceBox"
+            name="elecPriceBox"
+            placeholder="0.12"
+          />
+          <br />
+
+          <label for="mpkBox">Miles/kWh</label><br />
+          <input type="number" id="mpkBox" name="mpkBox" placeholder="3.5" />
+        </form>
+      </div>
+      <!-- CALCULATIONS -->
+      <div class="gallonsUsedBox littleBox">
+        <h4>Gallons Used</h4>
+        <div id="gallons"></div>
+      </div>
+      <div class="costOfGasTripBox littleBox">
+        <h4>Cost of Gas</h4>
+        <div id="cost"></div>
+      </div>
+
+      <div class="kwUsedBox littleBox">
+        <h4>kWh Used</h4>
+        <br />
+        <div id="kwUsed"></div>
+      </div>
+
+      <div class="costOfElecTripBox littleBox">
+        <h4>Cost of electricity</h4>
+        <br />
+        <div id="costOfElecTrip"></div>
+      </div>
+    </div>
+    <div class="buttonBox">
+      <button class="enter" onclick="fn1()" id="btn1">Enter</button>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
