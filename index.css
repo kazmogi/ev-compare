@@ -8,6 +8,11 @@
   font-size: 2 em;
 }
 
+body {
+  background-image: url("./media/hong-kong-1990268_1920.jpg");
+  background-size: cover;
+}
+
 button {
   width: 8rem;
   height: auto;
@@ -30,9 +35,10 @@ label {
 
 input {
   border-radius: 5px;
-  margin-bottom: 20px;
-  height: 2rem;
-  width: 100%;
+  /* margin-bottom: 40px; */
+  text-align: center;
+  height: 3rem;
+  width: 70%;
   font-size: 1.2rem;
   border-radius: 5px;
   text-align: center;
@@ -45,52 +51,109 @@ form {
   width: auto;
   color: white;
   padding: 2rem;
-  border: solid rgb(30, 50, 231) 2px;
   border-radius: 5px;
+  display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 /* ---GRID--- */
 .main {
   display: grid;
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  width: 50%;
   height: auto;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 5px;
-  background-color: #262626;
+  grid-template-columns: [input] 20vw [gas] 15vw [electricity]15vw;
+  grid-template-rows: repeat(5, 20vh);
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+  padding-top: 20px
+  
+  border: solid red 1px;
 }
 
 .formBox {
-  grid-area: 1 / 1 / 5 / 2;
+  display: flex;
+  /* height: 80%; */
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: 2 / 1 / 4 / 2;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.formBox2 {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .enter {
-  grid-area: 5 / 1 / 6 / 2;
+  grid-area: 4 / 1 / 5 / 2;
   margin-top: 20px;
+  
 }
 .gallonsUsedBox {
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .costOfGasTripBox {
-  grid-area: 2 / 2 / 3 / 4;
+  grid-area: 2 / 2 / 3 / 3;
 }
 .kwUsedBox {
-  grid-area: 3 / 2 / 4 / 4;
+  grid-area: 1 / 3 / 2 / 4;
 }
 .costOfElecTripBox {
-  grid-area: 4 / 2 / 5 / 4;
+  grid-area: 2 / 3 /3 / 4;
 }
 
+
+
 .littleBox {
-  min-height: 12.5vh;
-  width: 13vw;
-  color: whitesmoke;
-  font-size: 1.2rem;
-  border: solid rgb(30, 50, 231) 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+
+  color: #ffffff;
+  background-color: #262626;
+  opacity: 0.9;
+
+  font-size: 1.5rem;
+  border: solid black 2px;
   border-radius: 5px;
   padding: 0.5rem;
+  -webkit-backdrop-filter: grayscale(100%);
+  backdrop-filter: grayscale(100%);
+}
+
+.results{
+  font-size: 3.5rem;
+}
+
+.moneySavedBox{
+  grid-area: 3 / 2 / 4 / 4;
+  width: 100%;
 }
 
 .buttonBox {
-  background-color: #262626;
+  grid-area: 4 / 1 /5 / 2;
+  /* position: absolute; */
+  /* left: 25%;
+  top: 85%; */
+  
 }

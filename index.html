@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- THIS IS A TEST -->
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
     <title>EV compare</title>
   </head>
@@ -12,10 +11,15 @@
       <h1>EV vs Gas fuel price</h1>
     </header>
     <div class="main">
-      <div class="formBox">
+      <div class="formBox2">
         <form>
           <label for="distanceInput">Distance in miles</label><br />
-          <input type="number" id="distanceInput" name="distanceInput" /><br />
+          <input type="number" id="distanceInput" name="distanceInput" />
+        </form>
+      </div>
+
+      <div class="formBox">
+        <form>
           <label for="mpgInput">MPG</label><br />
           <input
             type="number"
@@ -47,27 +51,33 @@
       <!-- CALCULATIONS -->
       <div class="gallonsUsedBox littleBox">
         <h4>Gallons Used</h4>
-        <div id="gallons"></div>
+        <div id="gallons" class="results"></div>
       </div>
       <div class="costOfGasTripBox littleBox">
         <h4>Cost of Gas</h4>
-        <div id="cost"></div>
+        <div id="cost" class="results"></div>
       </div>
 
       <div class="kwUsedBox littleBox">
         <h4>kWh Used</h4>
 
-        <div id="kwUsed"></div>
+        <div id="kwUsed" class="results"></div>
       </div>
 
       <div class="costOfElecTripBox littleBox">
         <h4>Cost of electricity</h4>
 
-        <div id="costOfElecTrip"></div>
+        <div id="costOfElecTrip" class="results"></div>
       </div>
-    </div>
-    <div class="buttonBox">
-      <button class="enter" onclick="fn1()" id="btn1">Enter</button>
+      <!-- -----NEW BOX----- -->
+      <div class="moneySavedBox littleBox">
+        <h4>Money Saved</h4>
+
+        <div id="moneySaved" class="results"></div>
+      </div>
+      <div class="buttonBox">
+        <button class="enter" onclick="fn1()" id="btn1">Enter</button>
+      </div>
     </div>
 
     <script src="./app.js"></script>
