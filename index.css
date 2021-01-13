@@ -35,26 +35,39 @@ label {
 
 input {
   border-radius: 5px;
-  /* margin-bottom: 40px; */
   text-align: center;
   height: 3rem;
-  width: 70%;
+  width: 50%;
+  min-width: 40%;
   font-size: 1.2rem;
   border-radius: 5px;
   text-align: center;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: auto;
   color: white;
   padding: 2rem;
   border-radius: 5px;
   display: flex;
-flex-direction: column;
-align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+h1 {
+  background: #0685cf;
+  background: -webkit-linear-gradient(to right, #0685cf 0%, #cf11c9 71%);
+  background: -moz-linear-gradient(to right, #0685cf 0%, #cf11c9 71%);
+  background: linear-gradient(to right, #0685cf 0%, #cf11c9 71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
 }
 
 /* ---GRID--- */
@@ -69,18 +82,11 @@ align-items: center;
   grid-template-rows: repeat(5, 20vh);
   grid-column-gap: 20px;
   grid-row-gap: 25px;
-  padding-top: 20px
-  
-  border: solid red 1px;
+  padding-top: 20px;
 }
 
 .formBox {
-  display: flex;
-  /* height: 80%; */
-  flex-direction: column;
-  justify-content: space-between;
   grid-area: 2 / 1 / 4 / 2;
-
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13px);
@@ -102,10 +108,16 @@ align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.formStuff {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .enter {
   grid-area: 4 / 1 / 5 / 2;
   margin-top: 20px;
-  
 }
 .gallonsUsedBox {
   grid-area: 1 / 2 / 2 / 3;
@@ -120,19 +132,14 @@ align-items: center;
   grid-area: 2 / 3 /3 / 4;
 }
 
-
-
 .littleBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-
   color: #ffffff;
   background-color: #262626;
   opacity: 0.9;
-
   font-size: 1.5rem;
   border: solid black 2px;
   border-radius: 5px;
@@ -141,19 +148,15 @@ align-items: center;
   backdrop-filter: grayscale(100%);
 }
 
-.results{
+.results {
   font-size: 3.5rem;
 }
 
-.moneySavedBox{
+.moneySavedBox {
   grid-area: 3 / 2 / 4 / 4;
   width: 100%;
 }
 
 .buttonBox {
   grid-area: 4 / 1 /5 / 2;
-  /* position: absolute; */
-  /* left: 25%;
-  top: 85%; */
-  
 }
