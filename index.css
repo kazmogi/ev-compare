@@ -1,5 +1,3 @@
-/* ---Still need to figure out resizing at different screen sizes--- */
-
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +9,8 @@
 body {
   background-image: url("./media/hong-kong-1990268_1920.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000;
 }
 
 button {
@@ -55,7 +55,6 @@ form {
 }
 
 header {
-  color: #ffffff;
   text-align: center;
   font-size: 2.5em;
 }
@@ -70,16 +69,27 @@ h1 {
   -webkit-text-stroke: 1px white;
 }
 
+p {
+  background: #e6e6e6;
+  background: -webkit-linear-gradient(to right, #e6e6e6 0%, #bcbfcf 100%);
+  background: -moz-linear-gradient(to right, #e6e6e6 0%, #bcbfcf 100%);
+  background: linear-gradient(to right, #e6e6e6 0%, #bcbfcf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-size: 1.5rem;
+}
+
 /* ---GRID--- */
 .main {
   display: grid;
-  position: absolute;
-  left: 25%;
-  top: 15%;
-  width: 50%;
+  justify-content: center;
+  width: auto;
   height: auto;
-  grid-template-columns: [input] 20vw [gas] 15vw [electricity]15vw;
-  grid-template-rows: repeat(5, 20vh);
+  margin: 0 40px;
+  /* grid-template-columns: [input] 20vw [gas] 15vw [electricity]15vw; */
+  grid-template-columns: [input] 1fr [gas] 1fr [electricity]1fr;
+  grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 25px;
   padding-top: 20px;
@@ -159,4 +169,27 @@ h1 {
 
 .buttonBox {
   grid-area: 4 / 1 /5 / 2;
+}
+
+@media only screen and (max-width: 980px) {
+  .main {
+    margin: 0 20px;
+    grid-template-columns: [input] 1fr [gas] 1fr [electricity]1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  * {
+    margin: 20px 0;
+  }
+  .main {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  header {
+    font-size: 1.5em;
+  }
 }

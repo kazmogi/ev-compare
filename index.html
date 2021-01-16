@@ -8,7 +8,8 @@
   </head>
   <body>
     <header>
-      <h1>EV vs Gas fuel price</h1>
+      <h1>EV vs Gas price</h1>
+      <p>See how much you could save by switching to an electric vehicle</p>
     </header>
     <div class="main">
       <div class="formBox2">
@@ -17,7 +18,6 @@
           <input type="number" id="distanceInput" name="distanceInput" />
         </form>
       </div>
-
       <div class="formBox">
         <form>
           <div class="formStuff">
@@ -29,7 +29,6 @@
               placeholder="37"
             />
           </div>
-
           <div class="formStuff">
             <label for="gasPriceInput">Gas Price</label>
             <input
@@ -39,7 +38,6 @@
               placeholder="2.25"
             />
           </div>
-
           <div class="formStuff">
             <label for="elecPriceBox">kWh Price</label>
             <input
@@ -49,10 +47,9 @@
               placeholder="0.12"
             />
           </div>
-
           <div class="formStuff">
             <label for="mpkBox">Mi/kWh</label>
-            <input type="number" id="mpkBox" name="mpkBox" placeholder="3.5" />
+            <input type="number" id="mpkBox" name="mpkBox" placeholder="4.0" />
           </div>
         </form>
       </div>
@@ -65,29 +62,23 @@
         <h4>Cost of Gas</h4>
         <div id="cost" class="results"></div>
       </div>
-
       <div class="kwUsedBox littleBox">
         <h4>kWh Used</h4>
-
         <div id="kwUsed" class="results"></div>
       </div>
-
       <div class="costOfElecTripBox littleBox">
         <h4>Cost of electricity</h4>
-
         <div id="costOfElecTrip" class="results"></div>
       </div>
       <!-- -----NEW BOX----- -->
       <div class="moneySavedBox littleBox">
         <h4>Money Saved</h4>
-
         <div id="moneySaved" class="results"></div>
       </div>
       <div class="buttonBox">
         <button class="enter" onclick="fn1()" id="btn1">Enter</button>
       </div>
     </div>
-
     <script src="./app.js"></script>
   </body>
 </html>
