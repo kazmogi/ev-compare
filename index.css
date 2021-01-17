@@ -86,7 +86,7 @@ p {
   justify-content: center;
   width: auto;
   height: auto;
-  margin: 0 40px;
+  margin: 0 20%;
   /* grid-template-columns: [input] 20vw [gas] 15vw [electricity]15vw; */
   grid-template-columns: [input] 1fr [gas] 1fr [electricity]1fr;
   grid-template-rows: repeat(5, 1fr);
@@ -142,7 +142,7 @@ p {
   grid-area: 2 / 3 /3 / 4;
 }
 
-.littleBox {
+/* .littleBox {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,15 +156,72 @@ p {
   padding: 0.5rem;
   -webkit-backdrop-filter: grayscale(100%);
   backdrop-filter: grayscale(100%);
+} */
+
+.littleBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  color: #ffffff;
+  background-color: #262626;
+  opacity: 0.9;
+  font-size: 1.5rem;
+  border: solid black 2px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  -webkit-backdrop-filter: grayscale(100%);
+  backdrop-filter: grayscale(100%);
+}
+
+.littleBoxTitle {
+  grid-area: 2/1/3/3;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
 }
 
 .results {
+  grid-area: 1/1/2/2;
   font-size: 3.5rem;
+  /* width: 100%; */
+}
+
+.icon {
+  /* grid-area: 1/2/2/3;
+  display: flex; */
+  width: auto;
+  /* height: 100%; */
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.iconBox {
+  grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .moneySavedBox {
   grid-area: 3 / 2 / 4 / 4;
+  display: grid;
+  justify-content: center;
   width: 100%;
+  color: #ffffff;
+  background-color: #262626;
+  opacity: 0.9;
+  font-size: 1.5rem;
+  border: solid black 2px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  -webkit-backdrop-filter: grayscale(100%);
+  backdrop-filter: grayscale(100%);
+}
+
+.moneySavedTitle {
+  display: flex;
+  justify-content: center;
 }
 
 .buttonBox {
